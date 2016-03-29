@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  # changeasdsdfasdfasdfasd
   def index
     @product = Product.all
   end
