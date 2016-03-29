@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
   # changeasdsdfasdfasdfasd
   #using manav branch
+  def pankaj
+    # from third branch
+  end
   def index
     @product = Product.all
   end
