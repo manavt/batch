@@ -1,0 +1,20 @@
+<%= form_for([@product], url: {:controller=>"products",:action=>"trans_pay",:id=>@product}, method: :put) do |f|%>
+
+<%= fields_for :user do |f|%>
+<%= f.label :first_name%>
+<%= f.text_field :first_name%>
+<%= f.label :last_name%>
+<%= f.text_field :last_name%>
+<%= f.label :company%>
+<%= f.text_field :company%>
+<%= f.label :email%>
+<%= f.text_field :email%>
+<%= f.label :phone%>
+<%= f.text_field :phone%>
+<%= f.label :credit_card_number%>
+<%= f.text_field :credit_card_number%>
+<%= f.label :expiry_date%>
+<%= f.date_select(:date, :order => [:month, :day, :year])%>
+<%= f.submit "Pay"%>
+<%end%>
+<%end%>

@@ -1,0 +1,12 @@
+<% j = return_user_object%>
+<tr>
+	<td><%= image_tag j.image.photo(:small) if j.image.present?%></td>
+ <td><%=  j.name %></td>
+ <td><%=  j.email %></td>
+ <td><%=  j.phone %></td>
+ <td><%=  j.address %></td>
+ <td><%= link_to "Edit" , edit_user_path(j)%>
+ <td><%= link_to "Show" , user_path(j)%>
+ 	<td><%= link_to "Delete" , j , method: :delete, :data => {:confirm=>"Are you sure!"}%>
+ 		<td><%= display_name(j.name)%></td>
+</tr>

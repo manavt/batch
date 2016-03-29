@@ -1,0 +1,20 @@
+<table border = "1">
+<tr>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Phone</th>
+	<th>Address</th>
+	</tr>
+<% i = @user%>
+<tr>
+ <td><%=  i.name %></td>
+ <td><%=  i.email %></td>
+ <td><%=  i.phone %></td>
+ <td><%=  i.address %></td>
+ <td><%= link_to "Edit" , edit_user_path(i)%>
+</tr>
+
+</table>
+<%= link_to "Back" , users_path%>
+
+<!-- <a href=/users> Back-1</a> -->

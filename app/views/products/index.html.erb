@@ -1,0 +1,26 @@
+
+<table border = "1">
+<tr>
+	<th>Photo</th>
+	<th>Product Type</th>
+	<th>Brand</th>
+	<th>Price</th>
+	</tr>
+
+	<% @product.each do | j |%>
+<tr>
+	<td>
+		<% if j.images.present?%>
+		  <% j.images.each do | image |%>
+		    <%= image_tag image.photo(:small)%>
+		  <%end%> 
+		<%end%>
+		</td>
+	
+ <td><%=  j.product_type %></td>
+ <td><%=  j.brand %></td>
+ <td><%=  j.price %></td>
+ <td><%= link_to "Buy" , trans_product_path(j)%></td>
+ <%end%>
+ </tr>
+</table>

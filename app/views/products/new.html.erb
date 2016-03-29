@@ -1,0 +1,32 @@
+<table>
+	<!--%form_for is a helper %-->
+<%= form_for @product do | form | %>
+<tr>
+<td><%= form.label :product_type%></td>
+<td><%= form.text_field :product_type%></td>
+</tr>
+
+<tr>
+<td><%= form.label :brand%></td>
+<td><%= form.text_field :brand%></td>
+</tr>
+
+<tr>
+<td><%= form.label :price%></td>
+<td><%= form.text_field :price%></td>
+</tr>
+<tr>
+	<%= form.fields_for :image do | image | %>
+     <td><%= image.label :photo%></td>
+     <td><%= image.file_field :photo, :multiple => true%></td>
+   <%end%>
+</tr>
+<tr>
+	<td><%= form.submit "Sign up!"%></td>
+	</tr>
+<%end%>
+</table>
+
+<%= link_to "Back" , root_path%>
+
+

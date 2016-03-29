@@ -1,0 +1,24 @@
+<!--% if !session[:user_id].blank? %--> 
+
+<table border = "1">
+<tr>
+	<th>Photo</th>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Phone</th>
+	<th>Address</th>
+	</tr>
+<% if  admin?%>
+  
+    <%= render "ifadmin"%>
+
+<%else%>
+  <%= render "ifnormaluser"%>
+<%end%>
+</table>
+
+<%= link_to "Back" , users_path%>
+<%= link_to "Sign up new" , new_user_path%>
+ <!-- %end% -->
+ <%= will_paginate @user %>
+

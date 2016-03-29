@@ -1,0 +1,26 @@
+<table>
+	<!--%form_for is a helper %-->
+<%= form_for @user do | form | %>
+<tr>
+<td><%= form.label :name%></td>
+<td><%= form.text_field :name%></td>
+</tr>
+
+<tr>
+<td><%= form.label :email%></td>
+<td><%= form.text_field :email%></td>
+</tr>
+<tr>
+<td><%= form.label :phone%></td>
+<td><%= form.text_field :phone%></td>
+</tr>
+<tr>
+<td><%= form.label :address%></td>
+<td><%= form.text_field :address%></td>
+</tr>
+<tr>
+	<td><%= form.submit "Update"%></td>
+	</tr>
+<%end%>
+</table>
+<%= link_to "Back" , users_path%>
